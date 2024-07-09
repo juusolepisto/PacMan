@@ -1,6 +1,7 @@
 import { Box, Container, CssBaseline, ThemeProvider } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import theme from './theme'
+import NavBar from "../Navigation";
 
 const Root = () => {
     return (
@@ -16,6 +17,7 @@ const Root = () => {
                     backgroundPosition: 'center',
                 }}
             >
+                <NavBar/>
                 <Box component="main" sx={{ p: 3, flexGrow: 1 }}>
                     <Container maxWidth="lg" sx={{ mt: 8 }}>
                         <Outlet />
