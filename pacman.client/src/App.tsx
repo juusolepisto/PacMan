@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter, createRoutesFromElements, Route, RouteProvider } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import Root from "./components/Root";
 
 const appRouter = createBrowserRouter(
@@ -15,7 +15,7 @@ const appRouter = createBrowserRouter(
 
 function App(){
     return (
-        <RouteProvider router={appRouter} />
+        <RouterProvider router={appRouter} />
     )
 }
 export default App;
