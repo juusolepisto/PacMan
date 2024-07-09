@@ -11,4 +11,11 @@ const appRouter = createBrowserRouter(
             <Route path="companies" element={<CompaniesPage/>}/>
         </Route>
     )
-)
+);
+
+function App(){
+    return (
+        <RouteProvider router={appRouter} />
+    )
+}
+export default App;
