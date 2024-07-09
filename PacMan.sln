@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacMan.Server", "PacMan.Server\PacMan.Server.csproj", "{16D9E1C0-2840-43FE-A7D1-F90474C3E0AE}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "pacman.client", "pacman.client\pacman.client.esproj", "{1B148066-12DE-4709-A658-34B23BFCB304}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16D9E1C0-2840-43FE-A7D1-F90474C3E0AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16D9E1C0-2840-43FE-A7D1-F90474C3E0AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16D9E1C0-2840-43FE-A7D1-F90474C3E0AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16D9E1C0-2840-43FE-A7D1-F90474C3E0AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B148066-12DE-4709-A658-34B23BFCB304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B148066-12DE-4709-A658-34B23BFCB304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B148066-12DE-4709-A658-34B23BFCB304}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1B148066-12DE-4709-A658-34B23BFCB304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B148066-12DE-4709-A658-34B23BFCB304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B148066-12DE-4709-A658-34B23BFCB304}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4553788C-F84C-4C17-BB3F-59FC263BAA97}
+	EndGlobalSection
+EndGlobal

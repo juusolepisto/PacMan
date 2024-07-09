@@ -1,0 +1,6 @@
+@PacMan.Server_HostAddress = http://localhost:5062
+
+GET {{PacMan.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
