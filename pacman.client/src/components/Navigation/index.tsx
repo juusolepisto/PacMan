@@ -31,78 +31,6 @@ function NavBar() {
                         >
                             <MenuIcon />
                         </IconButton>
-
-                        {/* Menu for small screens */}
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: 'block', md: 'none' },
-                            }}
-                        >
-                            <MenuItem onClick={handleCloseNavMenu}
-                                sx={{
-                                    mt: 2,
-                                    mb: 2,
-                                    '&:hover': {
-                                        backgroundColor: 'transparent', // Override hover background for this specific MenuItem
-                                    },
-                                }}>
-                                <Typography textAlign="center" sx={{ width: '100%' }}>
-                                    <Link
-                                        component={RouterLink}
-                                        to="/admin"
-                                        underline="hover"
-                                        sx={{
-                                            color: 'white',
-                                            mx: '2px',
-                                            '&:hover': {
-                                                textDecorationThickness: '6px',
-                                                textUnderlineOffset: '18px',
-                                                color: 'orange',
-                                            }
-                                        }}>
-                                        Ylläpito
-                                    </Link>
-                                </Typography>
-                            </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}
-                                sx={{
-                                    mt: 2,
-                                    mb: 2,
-                                    '&:hover': {
-                                        backgroundColor: 'transparent', // Override hover background for this specific MenuItem
-                                    },
-                                }}>
-                                <Typography textAlign="center" sx={{ width: '100%' }}>
-                                    <Link href="#logout"
-                                        underline="hover"
-                                        sx={{
-                                            color: 'white',
-                                            mx: '2px',
-                                            '&:hover': {
-                                                textDecorationThickness: '6px',
-                                                textUnderlineOffset: '18px',
-                                                color: 'orange',
-                                            }
-                                        }}>
-                                        Kirjaudu ulos
-                                    </Link>
-                                </Typography>
-                            </MenuItem>
-                        </Menu>
-
                         {/* Small screens title */}
                         <Typography
                             variant="h6"
@@ -111,7 +39,7 @@ function NavBar() {
                             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'center' }}
                         >
                             <ContentPasteGo sx={{ marginRight: '6px', fontSize: '30px' }} />
-                            eLähete
+                            PacMan
                         </Typography>
 
                         {/* Large screens title */}
@@ -122,42 +50,8 @@ function NavBar() {
                             sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
                         >
                             <ContentPasteGo sx={{ marginRight: '6px', fontSize: '30px' }} />
-                            eLähete
+                            PacMan
                         </Typography>
-                        <Link
-                            component={RouterLink}
-                            to="/admin"
-                            underline="hover"
-                            sx={{
-                                color: 'white',
-                                mx: '30px',
-                                '&:hover': {
-                                    textDecorationThickness: '6px',
-                                    textUnderlineOffset: '18px',
-                                    color: 'orange',
-                                    borderColor: 'orange'
-                                },
-                                display: { xs: 'none', md: 'flex' }
-                            }}>
-                            Ylläpito
-                        </Link>
-                        {/*  TODO LOGOUT logci  */}
-                        <Link href="#logout"
-                            underline="hover"
-                            sx={{
-                                color: 'white',
-                                mx: '20px',
-                                '&:hover': {
-                                    textDecorationThickness: '6px',
-                                    textUnderlineOffset: '18px',
-                                    color: 'orange',
-                                    borderColor: 'orange'
-                                },
-                                display: { xs: 'none', md: 'flex' }
-                            }}>
-                            Kirjaudu ulos
-                        </Link>
-
                     </Toolbar>
                 </AppBar>
             </Box>
