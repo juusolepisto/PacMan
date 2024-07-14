@@ -5,6 +5,7 @@ const theme = createTheme({
         fontFamily: '"Roboto Flex", "Helvetica", "Arial", sans-serif',
     },
     palette: {
+        mode: 'dark',
         text: {
             primary: '#ffffff',
             secondary: '#ffffff',
@@ -63,10 +64,10 @@ const theme = createTheme({
                         borderColor: 'white',
                     },
                     '&:hover .MuiOutlinedInput-notchedOutline': {
-                        borderColor: 'orange',
+                        borderColor: 'white',
                     },
                     '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                        borderColor: 'orange',
+                        borderColor: 'white',
                     },
                 },
             },

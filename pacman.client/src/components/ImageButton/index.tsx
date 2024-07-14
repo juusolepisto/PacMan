@@ -1,30 +1,36 @@
 import React from "react";
-import { Button, Container, Paper, Typography } from '@mui/material'; 
+import { Container, Paper, Typography } from '@mui/material'; 
 import { ArrowForward } from "@mui/icons-material";
+import './ImageButton.css';
+import { Link } from "react-router-dom";
 
 interface ImageButtonProps {
     title: string;
     image: string;
+    url: string;
 }
 
-const ImageButton: React.FC<{props: ImageButtonProps}> = ({props}) => {
-    const styles = {
-        paperContainer: {
-            backgroundImage: `url(${props.image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-        }
-    };    
-
+const ImageButton: React.FC<ImageButtonProps> = ({title, image, url}) => {
     return (
         <>
-            <Container sx={{mt: 10}}>
-                <Paper elevation={1} sx={{p: 10}} style={styles.paperContainer}>
-                    <Typography variant="h4" gutterBottom>{props.title}</Typography>
-                    <Button variant="contained" startIcon={<ArrowForward />}></Button>
-                </Paper>
+            <Container sx={{ mt: 10 }}>
+                <Link to={url} className="imageButtonLink">
+                    <Paper 
+                        className="imageButtonPaper" 
+                        elevation={5} 
+                        style={{ backgroundImage: `url(${image})` }}
+                    >
+                        <Typography 
+                            variant="h4"
+                            id="title"
+                            >
+                                {title}
+                        </Typography>
+                    </Paper>
+                </Link>
             </Container>
         </>
     )
 }
+
 export default ImageButton;

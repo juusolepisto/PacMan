@@ -18,8 +18,8 @@ const Root = () => {
                 }}
             >
                 <NavBar/>
-                <Box component="main" sx={{ p: 3, flexGrow: 1 }}>
-                    <Container maxWidth="lg" sx={{ mt: 8 }}>
+                <Box component="main" sx={{ p: 2, flexGrow: 1 }}>
+                    <Container maxWidth="lg" sx={{ mt: 1 }}>
                         <Outlet />
                     </Container>
                 </Box>

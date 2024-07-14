@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Box, Toolbar, IconButton, Typography, Link, Menu, MenuItem } from '@mui/material';
-import { Menu as MenuIcon, ContentPasteGo } from '@mui/icons-material';
+import { Menu as MenuIcon, Savings } from '@mui/icons-material';
 import { Link as RouterLink } from 'react-router-dom';
 
 function NavBar() {
@@ -33,23 +33,23 @@ function NavBar() {
                         </IconButton>
                         {/* Small screens title */}
                         <Typography
-                            variant="h6"
+                            variant="h5"
                             noWrap
                             component="div"
                             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'center' }}
                         >
-                            <ContentPasteGo sx={{ marginRight: '6px', fontSize: '30px' }} />
+                            <Savings sx={{ marginRight: '6px', fontSize: '30px' }} />
                             PacMan
                         </Typography>
 
                         {/* Large screens title */}
                         <Typography
-                            variant="h6"
+                            variant="h5"
                             noWrap
                             component="div"
-                            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
+                            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}
                         >
-                            <ContentPasteGo sx={{ marginRight: '6px', fontSize: '30px' }} />
+                            <Savings sx={{ marginRight: '6px', fontSize: '30px' }} />
                             PacMan
                         </Typography>
                     </Toolbar>

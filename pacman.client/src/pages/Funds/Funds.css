@@ -1,0 +1,5 @@
+
+.Link:hover, .TableRow {
+    background-color: rgba(58, 44, 136, 0.5);
+    color: white; 
+}

@@ -1,1 +1,2 @@
 C:\Files\Practice\PacMan\pacman.client\obj\Debug\pacman.client.esproj.CoreCompileInputs.cache
+C:\Users\Juuso\Desktop\Coding\Projects\PacMan\pacman.client\obj\Debug\pacman.client.esproj.CoreCompileInputs.cache

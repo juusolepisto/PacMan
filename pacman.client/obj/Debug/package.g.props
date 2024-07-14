@@ -13,6 +13,7 @@
     <PackageJsonDependenciesEmotionStyled Condition="$(PackageJsonDependenciesEmotionStyled) == ''">^11.11.5</PackageJsonDependenciesEmotionStyled>
     <PackageJsonDependenciesMuiIconsMaterial Condition="$(PackageJsonDependenciesMuiIconsMaterial) == ''">^5.16.0</PackageJsonDependenciesMuiIconsMaterial>
     <PackageJsonDependenciesMuiMaterial Condition="$(PackageJsonDependenciesMuiMaterial) == ''">^5.16.0</PackageJsonDependenciesMuiMaterial>
+    <PackageJsonDependenciesMuiXDataGrid Condition="$(PackageJsonDependenciesMuiXDataGrid) == ''">^7.9.0</PackageJsonDependenciesMuiXDataGrid>
     <PackageJsonDependenciesReact Condition="$(PackageJsonDependenciesReact) == ''">^18.3.1</PackageJsonDependenciesReact>
     <PackageJsonDependenciesReactDom Condition="$(PackageJsonDependenciesReactDom) == ''">^18.3.1</PackageJsonDependenciesReactDom>
     <PackageJsonDependenciesReactRouterDom Condition="$(PackageJsonDependenciesReactRouterDom) == ''">^6.24.1</PackageJsonDependenciesReactRouterDom>
