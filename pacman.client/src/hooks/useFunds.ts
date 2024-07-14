@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 
 interface Investor {
-    Id: number;
-    Name: string;
+    id: number;
+    name: string;
 }
 
 interface Fund {
-    Id: number;
-    Name: string;
-    Investors: Investor[];
+    id: number;
+    name: string;
+    investors: Investor[];
 }
 
 const useFunds = () => {
@@ -19,7 +19,7 @@ const useFunds = () => {
     useEffect(() => {
         const fetchFunds = async () => {
             try {
-                const response = await fetch('http://localhost:5062/fund');
+                const response = await fetch('http://localhost:5062/Fund');
                 if (!response.ok){
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }

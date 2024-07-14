@@ -49,7 +49,7 @@ namespace PacMan.Server.Controllers
             },
             new() {
                 Id = 3,
-                Name = "Fund B",
+                Name = "Fund C",
                 Investors = Investors,
             }
         ];

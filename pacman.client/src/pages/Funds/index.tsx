@@ -29,9 +29,9 @@ const FundsPage: React.FC = () => {
         </TableHead>
         <TableBody>
           {funds.map((fund) => (
-            <TableRow className='TableRow' key={fund.Id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+            <TableRow className='TableRow' key={fund.id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
               <TableCell component="th" scope="row">
-                <Link className='Link' to={`/funds/${fund.Id}`}>{fund.Name}</Link>
+                <Link className='Link' to={`/funds/${fund.id}`}>{fund.name}</Link>
               </TableCell>
             </TableRow>
           ))}

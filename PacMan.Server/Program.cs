@@ -7,6 +7,19 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Add Cors services
+builder.Services.AddCors(options => 
+{
+    options.AddPolicy("AllowSpecificOrigin", 
+        builder => 
+        {
+            builder.WithOrigins("https://localhost:5173")
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        }
+    );
+});
+
 var app = builder.Build();
 
 app.UseDefaultFiles();
@@ -20,6 +33,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowSpecificOrigin");
 
 app.UseAuthorization();
 
