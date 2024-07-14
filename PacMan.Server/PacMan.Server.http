@@ -1,6 +1,12 @@
 @PacMan.Server_HostAddress = http://localhost:5062
 
-GET {{PacMan.Server_HostAddress}}/weatherforecast/
+GET {{PacMan.Server_HostAddress}}/fund/
 Accept: application/json
 
 ###
+GET {{PacMan.Server_HostAddress}}/fundinvestor/
+Accept: application/json
+
+###
+GET {{PacMan.Server_HostAddress}}/investor/
+Accept: application/json

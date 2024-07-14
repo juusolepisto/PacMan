@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PmbvDJAE5pzvXMTWNKNQe6f4hIz+JVYWwEmceMtF1CI=",
+  "Hash": "hYh0zLT3KRC3rmGGq91MaPUtoEgIYF3CGEheo9Fa7FQ=",
   "Source": "PacMan.Server",
   "BasePath": "_content/PacMan.Server",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "pacman.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],

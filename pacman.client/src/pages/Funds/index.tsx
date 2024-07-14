@@ -9,21 +9,14 @@ import Paper from '@mui/material/Paper';
 import { Link, useNavigate } from 'react-router-dom';
 import './Funds.css';
 import { Button, Typography } from '@mui/material';
-
-function createData(id: number, name: string) {
-  return { id, name };
-}
-
-const rows = [
-  createData(1, 'Frozen yoghurt'),
-  createData(2, 'Ice cream sandwich'),
-  createData(3, 'Eclair'),
-  createData(4, 'Cupcake'),
-  createData(5, 'Gingerbread'),
-];
+import useFunds from '../../hooks/useFunds';
 
 const FundsPage: React.FC = () => {
   const navigate = useNavigate();
+  const {funds, loading, error} = useFunds();
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <TableContainer component={Paper}>
@@ -35,10 +28,10 @@ const FundsPage: React.FC = () => {
         <TableHead >
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow className='TableRow' key={row.id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+          {funds.map((fund) => (
+            <TableRow className='TableRow' key={fund.Id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
               <TableCell component="th" scope="row">
-                <Link className='Link' to={`/funds/${row.id}`}>{row.name}</Link>
+                <Link className='Link' to={`/funds/${fund.Id}`}>{fund.Name}</Link>
               </TableCell>
             </TableRow>
           ))}

@@ -4,6 +4,7 @@ import Root from "./components/Root";
 import HomePage from "./pages/Home";
 import FundsPage from "./pages/Funds";
 import FundPage from "./pages/Fund";
+import InvestorsPage from "./pages/Investors";
 
 const appRouter = createBrowserRouter(
     createRoutesFromElements(
@@ -11,6 +12,7 @@ const appRouter = createBrowserRouter(
             <Route index element={<HomePage/>}/>
             <Route path="funds" element={<FundsPage/>}/>
             <Route path="funds/:id" element={<FundPage/>}/>
+            <Route path="investors" element={<InvestorsPage/>}/>
         </Route>
     )
 );

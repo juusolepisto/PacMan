@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
 import ImageButton from "../../components/ImageButton";
-import InverstorsImage from '../../assets/investor-stockphoto.jpg';
+import InvestorsImage from '../../assets/investor-stockphoto.jpg';
 import FundsImage from '../../assets/funds-stockphoto.jpg';
 
 const HomePage: React.FC = () => {
@@ -12,9 +12,9 @@ const HomePage: React.FC = () => {
             url: 'funds'
         }, 
         {
-            title: 'Inverstors',
-            image: InverstorsImage,
-            url: 'inverstors'
+            title: 'Investors',
+            image: InvestorsImage,
+            url: 'investors'
         }
     ]
 
