@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
         <>
             <Container 
                 maxWidth="lg" 
-                sx={{pt: 10}}>
+                sx={{p: 5}}>
                 <Grid 
                     container 
                     spacing={2} 

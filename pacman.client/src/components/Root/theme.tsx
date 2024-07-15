@@ -5,40 +5,13 @@ const theme = createTheme({
         fontFamily: '"Roboto Flex", "Helvetica", "Arial", sans-serif',
     },
     palette: {
-        mode: 'dark',
+        mode: 'light',
         text: {
             primary: '#ffffff',
             secondary: '#ffffff',
         },
     },
     components: {
-        MuiDivider: {
-            styleOverrides: {
-                root: {
-                    borderColor: 'white',
-                },
-            },
-        },
-        MuiAccordion: {
-            styleOverrides: {
-                root: {
-                    backgroundColor: 'rgba(39, 23, 128, 1)',
-                    border: '1px solid white',
-                    '&.Mui-expanded': {
-                        borderColor: 'orange',
-                    },
-                },
-            },
-        },
-        MuiAccordionSummary: {
-            styleOverrides: {
-                root: {
-                    '&.Mui-expanded': {
-                        color: 'orange',
-                    },
-                },
-            },
-        },
         MuiButton: {
             styleOverrides: {
                 root: {
@@ -53,71 +26,24 @@ const theme = createTheme({
         MuiPaper: {
             styleOverrides: {
                 root: {
-                    backgroundColor: 'rgba(39, 23, 128, 0.5)',
+                    backgroundColor: '#015757',
                 },
             },
         },
-        MuiOutlinedInput: {
+        MuiTable: {
             styleOverrides: {
                 root: {
-                    '& .MuiOutlinedInput-notchedOutline': {
-                        borderColor: 'white',
-                    },
-                    '&:hover .MuiOutlinedInput-notchedOutline': {
-                        borderColor: 'white',
-                    },
-                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                        borderColor: 'white',
-                    },
-                },
-            },
+                    backgroundColor: '#7ae6d8'
+                }
+            }
         },
-        MuiInput: {
+        MuiToolbar: {
             styleOverrides: {
                 root: {
-                    '&:before': {
-                        borderBottom: '1px solid white',
-                    },
-                    '&:hover:not(.Mui-disabled):before': {
-                        borderBottom: '2px solid orange',
-                    },
-                    '&.Mui-focused:after': {
-                        borderBottom: '2px solid orange',
-                    },
-                },
-            },
-        },
-        MuiMenu: {
-            styleOverrides: {
-                paper: {
-                    backgroundColor: 'rgba(39, 23, 128, 1)',
-                },
-            },
-        },
-        MuiMenuItem: {
-            styleOverrides: {
-                root: {
-                    '&:hover': {
-                        backgroundColor: 'rgba(255, 152, 0, 0.9)',
-                        color: 'black',
-                    },
-                },
-            },
-        },
-        MuiSelect: {
-            styleOverrides: {
-                icon: {
-                    color: 'white',
-                },
-            },
-        },
-        MuiDialog: {
-            styleOverrides: {
-                paper: {
-                    backgroundColor: 'rgba(39, 23, 128, 1)',
-                },
-            },
-        },
+                    backgroundColor: '#015757'
+                }
+            }
+        }
     },
 });
 

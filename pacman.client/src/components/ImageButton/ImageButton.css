@@ -14,7 +14,7 @@
 }
 
 .imageButtonPaper:hover {
-    box-shadow: 0px 0px 3rem red;
+    box-shadow: 0px 0px 3rem #015757;
 }
 
 #title {
