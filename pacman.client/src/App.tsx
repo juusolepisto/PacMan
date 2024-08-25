@@ -1,10 +1,10 @@
 import React from "react";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import Root from "./components/Root";
-import HomePage from "./pages/Home";
-import FundsPage from "./pages/Funds";
-import FundPage from "./pages/Fund";
-import InvestorsPage from "./pages/Investors";
+import HomePage from "./pages/Home/Home";
+import FundsPage from "./pages/Funds/Funds";
+import FundPage from "./pages/Fund/Fund";
+import InvestorsPage from "./pages/Investors/Investors";
 
 const appRouter = createBrowserRouter(
     createRoutesFromElements(

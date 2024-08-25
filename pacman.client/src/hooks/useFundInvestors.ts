@@ -1,36 +1,33 @@
 import { useState, useEffect } from "react";
 
-interface Investor {
-    Id: number;
-    Name: string;
-}
-
-interface FundInvestor {
-    Id: number;
-    FundId: number;
-    Investor: Investor;
-    Commitment: number;
-    PaidIn: number;
-    Distribution: number;
-    Profit: number;
-}
-
-const useFundInvestors = () => {
-    const [fundInvestors, setFundInvestors] = useState<FundInvestor[]>([]);
+const useFundInvestors = (fundId: number) => {
+    const [fundInvestors, setFundInvestors] = useState([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchInvestors = async () => {
             try {
-                const response = await fetch('http://localhost:5062/fundinvestor');
-                console.log(response);
-                if (!response.ok){
+                const response = await fetch(`http://localhost:5062/FundInvestor?fundId=${fundId}`);
+                if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                const data: FundInvestor[] = await response.json();
-                setFundInvestors(data);
-            } catch (error: any){
+                const data = await response.json();
+
+                //const fundInvestors = data.$values.map((fi: any) => ({
+                //    Id: fi.id,
+                //    FundId: fi.fundId,
+                //    Investor: fi.investor,
+                //    Commitment: fi.commitment,
+                //    PaidIn: fi.paidIn,
+                //    Distribution: fi.distribution,
+                //    Profit: fi.profit,
+                //}));
+
+                const fundInvestors = data.$values;
+
+                setFundInvestors(fundInvestors);
+            } catch (error: any) {
                 setError(error.message);
             } finally {
                 setLoading(false);
@@ -38,7 +35,7 @@ const useFundInvestors = () => {
         };
 
         fetchInvestors();
-    }, []);
+    }, [fundId]);
 
     return { fundInvestors, loading, error };
 };

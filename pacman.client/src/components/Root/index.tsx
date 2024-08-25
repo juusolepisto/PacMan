@@ -15,12 +15,13 @@ const Root = () => {
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
+                    backgroundColor: '#015757'
                 }}
             >
                 <NavBar/>
                 <Box component="main" sx={{ p: 2, flexGrow: 1 }}>
                     <Container maxWidth="lg" sx={{ 
-                        mt: 1, mb: 2, p: 4, backgroundColor:'#7ae6d8', 
+                        mt: 1, mb: 2, p: 4, 
                         borderRadius: 5
                         }}>
                         <Outlet />

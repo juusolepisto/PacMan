@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react";
 
-interface Investor {
+interface FundInvestor {
     id: number;
-    name: string;
+    investorName: string;
+    commitment: number;
+    paidin: number;
+    distribution: number;
+    profit: number;
 }
 
 interface Fund {
     id: number;
     name: string;
-    investors: Investor[];
+    description: string;
+    fundInvestors: FundInvestor[];
 }
 
-const useFunds = () => {
+const useFetchFunds = () => {
     const [funds, setFunds] = useState<Fund[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
@@ -23,8 +28,9 @@ const useFunds = () => {
                 if (!response.ok){
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                const data: Fund[] = await response.json();
-                setFunds(data);
+                const data = await response.json();
+                const funds = data.$values;
+                setFunds(funds);
             } catch (error: any){
                 setError(error.message);
             } finally {
@@ -37,4 +43,4 @@ const useFunds = () => {
 
     return { funds, loading, error };
 };
-export default useFunds;
+export default useFetchFunds;

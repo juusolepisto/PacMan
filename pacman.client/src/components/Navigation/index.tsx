@@ -1,7 +1,7 @@
 import React from 'react';
-import { AppBar, Box, Toolbar, IconButton, Typography, Link, Menu, MenuItem } from '@mui/material';
+import { AppBar, Box, Toolbar, IconButton, Typography, Menu, MenuItem } from '@mui/material';
 import { Menu as MenuIcon, Savings } from '@mui/icons-material';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
     
@@ -28,6 +28,7 @@ function NavBar() {
                             aria-label="menu"
                             sx={{ mr: 2, display: { xs: 'flex', md: 'none' } }}
                             onClick={handleOpenNavMenu}
+                            style={{color: 'black'}}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -37,6 +38,7 @@ function NavBar() {
                             noWrap
                             component="div"
                             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'center' }}
+                            style={{color: 'black'}}
                         >
                             <Savings sx={{ marginRight: '6px', fontSize: '30px' }} />
                             PacMan
@@ -48,9 +50,12 @@ function NavBar() {
                             noWrap
                             component="div"
                             sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}
+                            style={{color: 'black'}}
                         >
-                            <Savings sx={{ marginRight: '6px', fontSize: '30px' }} />
-                            PacMan
+                            <Link to="/">
+                                <Savings sx={{ marginRight: '6px', fontSize: '30px' }} />
+                                PacMan
+                            </Link>
                         </Typography>
                     </Toolbar>
                 </AppBar>

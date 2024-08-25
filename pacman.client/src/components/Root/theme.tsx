@@ -26,21 +26,21 @@ const theme = createTheme({
         MuiPaper: {
             styleOverrides: {
                 root: {
-                    backgroundColor: '#015757',
+                    backgroundColor: '#7ae6d8',
                 },
             },
         },
         MuiTable: {
             styleOverrides: {
                 root: {
-                    backgroundColor: '#7ae6d8'
+                    backgroundColor: 'white',
                 }
             }
         },
         MuiToolbar: {
             styleOverrides: {
                 root: {
-                    backgroundColor: '#015757'
+                    backgroundColor: 'white'
                 }
             }
         }

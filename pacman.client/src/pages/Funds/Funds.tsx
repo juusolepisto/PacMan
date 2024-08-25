@@ -8,20 +8,26 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Link, useNavigate } from 'react-router-dom';
 import './Funds.css';
-import { Button, Typography } from '@mui/material';
-import useFunds from '../../hooks/useFunds';
+import { Box, Button, CircularProgress, Typography } from '@mui/material';
+import useFunds from '../../hooks/useFetchFunds';
 
 const FundsPage: React.FC = () => {
   const navigate = useNavigate();
   const {funds, loading, error} = useFunds();
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return( 
+    <Box sx={{ display: 'flex' }}>
+      <CircularProgress color="inherit"/>
+    </Box>
+  );
   if (error) return <div>Error: {error}</div>;
+
+  console.log(funds);
 
   return (
     <TableContainer component={Paper}>
         <div style={{display: 'flex', justifyContent: 'space-between', padding: '1rem'}}>
-          <Typography variant='h5' gutterBottom >Funds</Typography>
+          <Typography variant='h5' gutterBottom style={{color: 'black'}} >Funds</Typography>
           <Button onClick={() => navigate(-1)} >Go back</Button>
       </div>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -32,6 +38,9 @@ const FundsPage: React.FC = () => {
             <TableRow className='TableRow' key={fund.id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
               <TableCell component="th" scope="row">
                 <Link className='Link' to={`/funds/${fund.id}`}>{fund.name}</Link>
+              </TableCell>
+              <TableCell>
+                <Typography sx={{ color: 'black' }} gutterBottom>{fund.description}</Typography>
               </TableCell>
             </TableRow>
           ))}

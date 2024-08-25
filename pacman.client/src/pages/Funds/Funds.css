@@ -1,8 +1,11 @@
-
 .Link:hover, .TableRow {
-    background-color: #7ae6d8d8;
-    color: grey; 
+    background-color: white;
+    color: rgb(55, 143, 106);
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+     
 }
 .Link {
     color: black;
+    font-weight: bold;
 }

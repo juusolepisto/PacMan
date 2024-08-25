@@ -1,93 +1,47 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PacMan.Server.Data;
 using PacMan.Server.Models;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace PacMan.Server.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class FundInvestorController : Controller
+    public class FundInvestorController : ControllerBase
     {
-        private static readonly List<Investor> Investors =
-        [
-            new()
-            {
-                Id = 1,
-                Name = "Investor 1",
-            },
-            new()
-            {
-                Id = 2,
-                Name = "Investor 2",
-            },
-            new()
-            {
-                Id = 3,
-                Name = "Investor 3"
-            },
-            new()
-            {
-                Id = 4,
-                Name = "Investor 4"
-            }
-        ];
+        private readonly PacManDbContext _context;
 
-        private static readonly List<Fund> Funds =
-        [
-            new()
-            {
-                Id = 1,
-                Name = "Fund A",
-                Investors = Investors,
-            },
-            new()
-            {
-                Id = 2,
-                Name = "Fund B",
-                Investors = Investors,
-            },
-            new()
-            {
-                Id = 3,
-                Name = "Fund B",
-                Investors = Investors,
-            }
-        ];
-
-        private static readonly List<FundInvestor> FundInvestors =
-        [
-            new ()
-            {
-                Id = 1,
-                Investor = Investors.Where(i => i.Id == 1).Single(),
-                Commitment = 1000000,
-                PaidIn = 800000,
-                Distribution = 200000,
-                Profit = 50000
-            },
-            new ()
-            {
-                Id = 2,
-                Investor = Investors.Where(i => i.Id == 2).Single(),
-                Commitment = 2000000,
-                PaidIn = 1500000,
-                Distribution = 500000,
-                Profit = 150000
-            },
-            new ()
-            {
-                Id = 3,
-                Investor = Investors.Where(i => i.Id == 3).Single(),
-                Commitment = 1500000,
-                PaidIn = 1300000,
-                Distribution = 300000,
-                Profit = 100000
-            }
-        ];
+        public FundInvestorController(PacManDbContext context)
+        {
+            _context = context;
+        }
 
         [HttpGet(Name = "GetFundInvestors")]
-        public async Task<IEnumerable<FundInvestor>> GetFundInvestors()
+        public async Task<ActionResult<IEnumerable<FundInvestor>>> GetFundInvestors(int fundId)
         {
-            return await Task.FromResult(FundInvestors);
+            try
+            {
+                var fundInvestors = await _context.FundInvestors   
+                    .Include(f => f.Investor)  // Include the related Investor data
+                    .Where(f => f.FundId == fundId)
+                    .ToListAsync();
+
+                if (fundInvestors == null || fundInvestors.Count == 0)
+                {
+                    return NotFound("No fund investors found for this fund.");
+                }
+
+                return Ok(fundInvestors);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (optional)
+                Console.WriteLine($"Error fetching fund investors: {ex.Message}");
+                return StatusCode(500, "Internal server error. Please try again later.");
+            }
         }
     }
 }

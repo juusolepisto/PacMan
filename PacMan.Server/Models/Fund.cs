@@ -1,9 +1,8 @@
-﻿namespace PacMan.Server.Models
+﻿using PacMan.Server.Models;
+
+public class Fund
 {
-    public class Fund
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public List<Investor> Investors { get; set; }
-    }
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
 }
