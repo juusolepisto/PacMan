@@ -43,5 +43,22 @@ namespace PacMan.Server.Controllers
                 return StatusCode(500, "Internal server error. Please try again later.");
             }
         }
+
+        [HttpGet(Name = "GetInvestorsFunds")]
+        public async Task<ActionResult<IEnumerable<FundInvestor>>> GetInvestorsFunds(int investorId)
+        {
+            var investorsFunds = await _context.FundInvestors
+                .Include(f => f.Investor)
+                .Where(f => f.InvestorId == investorId)
+                .ToListAsync();
+
+                if (investorsFunds == null || investorsFunds.Count == 0)
+                {
+                    return NotFound("No fund investors found for this fund.");
+                }
+
+                return Ok(investorsFunds);
+        }
+
     }
 }

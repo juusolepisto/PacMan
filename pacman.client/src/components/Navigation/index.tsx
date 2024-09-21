@@ -34,6 +34,7 @@ function NavBar() {
                         </IconButton>
                         {/* Small screens title */}
                         <Typography
+                            className='Link'
                             variant="h5"
                             noWrap
                             component="div"

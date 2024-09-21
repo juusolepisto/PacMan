@@ -14,16 +14,6 @@ const useFundInvestors = (fundId: number) => {
                 }
                 const data = await response.json();
 
-                //const fundInvestors = data.$values.map((fi: any) => ({
-                //    Id: fi.id,
-                //    FundId: fi.fundId,
-                //    Investor: fi.investor,
-                //    Commitment: fi.commitment,
-                //    PaidIn: fi.paidIn,
-                //    Distribution: fi.distribution,
-                //    Profit: fi.profit,
-                //}));
-
                 const fundInvestors = data.$values;
 
                 setFundInvestors(fundInvestors);

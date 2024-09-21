@@ -44,40 +44,44 @@ const FundPage: React.FC = () => {
     return (
         <>
             <Container>
-                <Paper elevation={8}>
-                    <div style={{display: 'flex', justifyContent: 'space-between', padding: '1rem'}}>
-                        <Typography variant='h5' gutterBottom style={{ color: 'black'}}>{fund.name}</Typography>
-                        <Button onClick={() => navigate(-1)} >Go back</Button>
-                    </div>
-                    <TableContainer component={Paper} >
-                        <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                            <TableHead>
-                                <TableRow >
-                                    <TableCell style={{ color: 'black'}}>Investors</TableCell>
-                                    <TableCell style={{ color: 'black'}}>Commitments</TableCell>
-                                    <TableCell style={{ color: 'black'}}>Paid-In</TableCell>
-                                    <TableCell style={{ color: 'black'}}>Distribution</TableCell>
-                                    <TableCell style={{ color: 'black'}}>Profit</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {fundInvestors.map((detail, index) => (
-                                    <TableRow
-                                        key={index}
-                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                    >
-                                        <TableCell component="th" scope="row" style={{ color: 'black'}}>
-                                            {detail.investor.name}
-                                        </TableCell>
-                                        <TableCell style={{ color: 'black'}}>{detail.commitment}</TableCell>
-                                        <TableCell style={{ color: 'black'}}>{detail.paidIn}</TableCell>
-                                        <TableCell style={{ color: 'black'}}>{detail.distribution}</TableCell>
-                                        <TableCell style={{ color: 'black'}}>{detail.profit}</TableCell>
+                <Paper elevation={4} sx={{p: 1, backgroundColor: '#008080'}}>
+                    <Paper elevation={4} sx={{m: 1}}>
+                        <div style={{display: 'flex', justifyContent: 'space-between', padding: '1rem'}}>
+                            <Typography variant='h5' gutterBottom style={{ color: 'black'}}>{fund.name}</Typography>
+                            <Button onClick={() => navigate(-1)} >Go back</Button>
+                        </div>
+                    </Paper>
+                    <Paper elevation={4} sx={{m: 1}}>
+                        <TableContainer component={Paper} >
+                            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                                <TableHead>
+                                    <TableRow >
+                                        <TableCell style={{ color: 'black'}}>Investors</TableCell>
+                                        <TableCell style={{ color: 'black'}}>Commitments</TableCell>
+                                        <TableCell style={{ color: 'black'}}>Paid-In</TableCell>
+                                        <TableCell style={{ color: 'black'}}>Distribution</TableCell>
+                                        <TableCell style={{ color: 'black'}}>Profit</TableCell>
                                     </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
+                                </TableHead>
+                                <TableBody>
+                                    {fundInvestors.map((detail, index) => (
+                                        <TableRow
+                                            key={index}
+                                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                        >
+                                            <TableCell component="th" scope="row" style={{ color: 'black'}}>
+                                                {detail.investor.name}
+                                            </TableCell>
+                                            <TableCell style={{ color: 'black'}}>{detail.commitment}</TableCell>
+                                            <TableCell style={{ color: 'black'}}>{detail.paidIn}</TableCell>
+                                            <TableCell style={{ color: 'black'}}>{detail.distribution}</TableCell>
+                                            <TableCell style={{ color: 'black'}}>{detail.profit}</TableCell>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                    </Paper>
                 </Paper>
             </Container>
         </>
