@@ -29,8 +29,8 @@ const useFetchFunds = () => {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const data = await response.json();
-                const funds = data.$values;
-                setFunds(funds);
+
+                setFunds(data.$values);
             } catch (error: any){
                 setError(error.message);
             } finally {

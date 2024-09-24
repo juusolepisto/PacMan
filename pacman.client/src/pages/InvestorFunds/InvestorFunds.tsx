@@ -15,7 +15,6 @@ const InvestorFundsPage: React.FC = () => {
     );
     if (error) return <div>Error: {error}</div>;
 
-
     return(
         <TableContainer component={Paper} sx={{p: 1, backgroundColor: '#008080'}}>
             <Paper elevation={4} sx={{m:1}}>

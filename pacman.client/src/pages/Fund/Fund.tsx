@@ -56,11 +56,11 @@ const FundPage: React.FC = () => {
                             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                                 <TableHead>
                                     <TableRow >
-                                        <TableCell style={{ color: 'black'}}>Investors</TableCell>
-                                        <TableCell style={{ color: 'black'}}>Commitments</TableCell>
-                                        <TableCell style={{ color: 'black'}}>Paid-In</TableCell>
-                                        <TableCell style={{ color: 'black'}}>Distribution</TableCell>
-                                        <TableCell style={{ color: 'black'}}>Profit</TableCell>
+                                        <TableCell style={{ color: 'black', fontWeight: 'bold'}}>Investors</TableCell>
+                                        <TableCell style={{ color: 'black', fontWeight: 'bold'}}>Commitments</TableCell>
+                                        <TableCell style={{ color: 'black', fontWeight: 'bold'}}>Paid-In</TableCell>
+                                        <TableCell style={{ color: 'black', fontWeight: 'bold'}}>Distribution</TableCell>
+                                        <TableCell style={{ color: 'black', fontWeight: 'bold'}}>Profit</TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
@@ -70,7 +70,7 @@ const FundPage: React.FC = () => {
                                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                         >
                                             <TableCell component="th" scope="row" style={{ color: 'black'}}>
-                                                {detail.investor.name}
+                                                {detail.investorName}
                                             </TableCell>
                                             <TableCell style={{ color: 'black'}}>{detail.commitment}</TableCell>
                                             <TableCell style={{ color: 'black'}}>{detail.paidIn}</TableCell>

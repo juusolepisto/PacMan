@@ -14,9 +14,7 @@ const useFetchInvestorFunds = (investorId: number) => {
                 }
                 const data = await response.json();
                 
-                const investorFunds = data.$values || data;
-
-                setInvestorFunds(investorFunds);
+                setInvestorFunds(data.$values);
             } catch (error: any) {
                 setError(error.message);
             } finally {
@@ -29,6 +27,7 @@ const useFetchInvestorFunds = (investorId: number) => {
         }
     }, [investorId]);
 
+    console.log(investorFunds);
     return { investorFunds, loading, error};
 ;}
 

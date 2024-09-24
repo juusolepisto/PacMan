@@ -5,10 +5,8 @@ namespace PacMan.Server.Data
 {
     public class PacManDbContext : DbContext
     {
-        public PacManDbContext(DbContextOptions<PacManDbContext> options)
-            : base(options)
-        {
-        }
+        public PacManDbContext(DbContextOptions<PacManDbContext> options) : base(options)
+        { }
 
         public DbSet<Investor> Investors { get; set; }
         public DbSet<Fund> Funds { get; set; }

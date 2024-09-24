@@ -14,12 +14,10 @@ const useInvestors = () => {
         const fetchInvestors = async () => {
             try {
                 const response = await fetch('http://localhost:5062/Investor');
-                console.log(response);
                 if (!response.ok){
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const data = await response.json();
-                console.log(data);
                 setInvestors(data.$values);
             } catch (error: any){
                 setError(error.message);

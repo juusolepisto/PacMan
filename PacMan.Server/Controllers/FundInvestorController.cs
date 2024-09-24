@@ -25,7 +25,7 @@ namespace PacMan.Server.Controllers
             try
             {
                 var fundInvestors = await _context.FundInvestors   
-                    .Include(f => f.Investor)  // Include the related Investor data
+                    .Include(f => f.Investor)
                     .Where(f => f.FundId == fundId)
                     .ToListAsync();
 
@@ -56,7 +56,7 @@ namespace PacMan.Server.Controllers
         }
 
         [HttpGet("investor/{investorId}")]
-        public async Task<ActionResult<IEnumerable<FundInvestorDTO>>> GetInvestorsFunds(int investorId)
+        public async Task<ActionResult<IEnumerable<FundDTO>>> GetInvestorsFunds(int investorId)
         {
             var investorsFunds = await _context.FundInvestors
                 .Include(f => f.Investor)
@@ -74,13 +74,14 @@ namespace PacMan.Server.Controllers
                     .Where(f => fundIds.Contains(f.Id))
                     .ToListAsync();
 
-                var investorFundsDTOs = investorsFunds.Select(f => new InvestorFundsDTO()
+                var fundDTOs = funds.Where(fund => fundIds.Contains(fund.Id)).Select(f => new FundDTO()
                 {
-                    InvestorId = f.InvestorId,
-                    Funds = funds
+                        Id = f.Id,
+                        Name = f.Name,
+                        Description = f.Description,
                 });
 
-                return Ok(investorsFunds);
+                return Ok(fundDTOs);
         }
 
     }

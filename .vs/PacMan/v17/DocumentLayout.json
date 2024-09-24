@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{16D9E1C0-2840-43FE-A7D1-F90474C3E0AE}|PacMan.Server\\PacMan.Server.csproj|c:\\users\\juuso\\desktop\\coding\\projects\\pacman\\pacman.server\\models\\fund.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16D9E1C0-2840-43FE-A7D1-F90474C3E0AE}|PacMan.Server\\PacMan.Server.csproj|solutionrelative:pacman.server\\models\\fund.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PacManDb/True/SqlTable/dbo.FundInvestors.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
@@ -20,10 +24,6 @@
       "RelativeMoniker": "D:0:0:{16D9E1C0-2840-43FE-A7D1-F90474C3E0AE}|PacMan.Server\\PacMan.Server.csproj|solutionrelative:pacman.server\\models\\fundinvestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16D9E1C0-2840-43FE-A7D1-F90474C3E0AE}|PacMan.Server\\PacMan.Server.csproj|c:\\users\\juuso\\desktop\\coding\\projects\\pacman\\pacman.server\\models\\fund.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16D9E1C0-2840-43FE-A7D1-F90474C3E0AE}|PacMan.Server\\PacMan.Server.csproj|solutionrelative:pacman.server\\models\\fund.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{16D9E1C0-2840-43FE-A7D1-F90474C3E0AE}|PacMan.Server\\PacMan.Server.csproj|c:\\users\\juuso\\desktop\\coding\\projects\\pacman\\pacman.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16D9E1C0-2840-43FE-A7D1-F90474C3E0AE}|PacMan.Server\\PacMan.Server.csproj|solutionrelative:pacman.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,37 +39,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "dbo.FundInvestors [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PacManDb/True/SqlTable/dbo.FundInvestors.sql",
-              "ToolTip": "dbo.FundInvestors [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-08-23T21:28:40.15Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "dbo.Funds [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PacManDb/True/SqlTable/dbo.Funds.sql",
-              "ToolTip": "dbo.Funds [Data]",
+              "Title": "dbo.FundInvestors.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PacManDb/True/SqlTable/dbo.FundInvestors.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PacManDb/True/SqlTable/dbo.FundInvestors.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-08-23T21:28:37.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T21:28:40.15Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "dbo.Investors [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PacManDb/True/SqlTable/dbo.Investors.sql",
-              "ToolTip": "dbo.Investors [Data]",
+              "Title": "dbo.Funds.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PacManDb/True/SqlTable/dbo.Funds.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PacManDb/True/SqlTable/dbo.Funds.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-08-23T21:28:32.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T21:28:37.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dbo.Investors.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PacManDb/True/SqlTable/dbo.Investors.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PacManDb/True/SqlTable/dbo.Investors.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-08-23T21:28:32.364Z"
             },
             {
               "$type": "Document",
@@ -86,19 +83,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Fund.cs",
               "DocumentMoniker": "C:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\Models\\Fund.cs",
               "RelativeDocumentMoniker": "PacMan.Server\\Models\\Fund.cs",
               "ToolTip": "C:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\Models\\Fund.cs",
               "RelativeToolTip": "PacMan.Server\\Models\\Fund.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T15:34:01.453Z"
+              "WhenOpened": "2024-08-16T15:34:01.453Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PacManDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\Data\\PacManDbContext.cs",
               "RelativeDocumentMoniker": "PacMan.Server\\Data\\PacManDbContext.cs",
@@ -106,7 +104,8 @@
               "RelativeToolTip": "PacMan.Server\\Data\\PacManDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T15:25:48.589Z"
+              "WhenOpened": "2024-08-16T15:25:48.589Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -118,11 +117,12 @@
               "RelativeToolTip": "PacMan.Server\\Models\\Investor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T15:25:27.935Z"
+              "WhenOpened": "2024-08-16T15:25:27.935Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "FundInvestor.cs",
               "DocumentMoniker": "C:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\Models\\FundInvestor.cs",
               "RelativeDocumentMoniker": "PacMan.Server\\Models\\FundInvestor.cs",
@@ -130,7 +130,8 @@
               "RelativeToolTip": "PacMan.Server\\Models\\FundInvestor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T15:25:08.218Z"
+              "WhenOpened": "2024-08-16T15:25:08.218Z",
+              "EditorCaption": ""
             }
           ]
         }
