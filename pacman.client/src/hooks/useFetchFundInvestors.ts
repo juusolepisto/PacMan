@@ -8,13 +8,13 @@ const useFundInvestors = (fundId: number) => {
     useEffect(() => {
         const fetchInvestors = async () => {
             try {
-                const response = await fetch(`http://localhost:5062/FundInvestor?fundId=${fundId}`);
+                const response = await fetch(`http://localhost:5062/FundInvestor/fund/${fundId}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const data = await response.json();
 
-                const fundInvestors = data.$values;
+                const fundInvestors = data.$values || data;
 
                 setFundInvestors(fundInvestors);
             } catch (error: any) {
@@ -23,8 +23,9 @@ const useFundInvestors = (fundId: number) => {
                 setLoading(false);
             }
         };
-
-        fetchInvestors();
+        if (fundId){
+            fetchInvestors();
+        }
     }, [fundId]);
 
     return { fundInvestors, loading, error };

@@ -2,7 +2,7 @@ import { Box, Button, CircularProgress, Container, Paper, Table, TableBody, Tabl
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useFunds from "../../hooks/useFetchFunds";
-import useFundInvestors from "../../hooks/useFundInvestors";
+import useFundInvestors from "../../hooks/useFetchFundInvestors";
 
 interface Fund {
     id: number,

@@ -14,10 +14,18 @@ namespace PacMan.Server.Controllers
         private readonly PacManDbContext _context = context;
 
         [HttpGet(Name = "GetFunds")]
-        public async Task<IEnumerable<Fund>> GetFunds()
+        public async Task<IEnumerable<FundDTO>> GetFunds()
         {
-            return await _context.Funds
-                .ToListAsync();
+            var funds = await _context.Funds.ToListAsync();
+
+            var fundDTOs = funds.Select(f => new FundDTO()
+            {
+                Id = f.Id,
+                Name = f.Name,
+                Description = f.Description,
+            });
+
+            return fundDTOs;
         }
     }
 }

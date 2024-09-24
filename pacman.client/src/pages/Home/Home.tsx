@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
                     sx={{justifyContent: 'center'}}
                     >
                     {imageButtons.map((imagebutton, index) => (
-                        <Grid item xs={4} key={index}>
+                        <Grid item xs={4} lg={5} key={index}>
                             <ImageButton {...imagebutton}/>
                         </Grid>
                     ))}

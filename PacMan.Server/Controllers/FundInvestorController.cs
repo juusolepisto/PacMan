@@ -19,8 +19,8 @@ namespace PacMan.Server.Controllers
             _context = context;
         }
 
-        [HttpGet(Name = "GetFundInvestors")]
-        public async Task<ActionResult<IEnumerable<FundInvestor>>> GetFundInvestors(int fundId)
+        [HttpGet("fund/{fundId}")]
+        public async Task<ActionResult<IEnumerable<FundInvestorDTO>>> GetFundInvestors(int fundId)
         {
             try
             {
@@ -34,7 +34,18 @@ namespace PacMan.Server.Controllers
                     return NotFound("No fund investors found for this fund.");
                 }
 
-                return Ok(fundInvestors);
+                var fundInvestorDTOs = fundInvestors.Select(f => new FundInvestorDTO()
+                {
+                    FundId = f.FundId,
+                    InvestorId = f.InvestorId,
+                    InvestorName = f.Investor.Name,
+                    Commitment = f.Commitment,
+                    PaidIn = f.PaidIn,
+                    Distribution = f.Distribution,
+                    Profit = f.Profit,
+                });
+
+                return Ok(fundInvestorDTOs);
             }
             catch (Exception ex)
             {
@@ -44,8 +55,8 @@ namespace PacMan.Server.Controllers
             }
         }
 
-        [HttpGet(Name = "GetInvestorsFunds")]
-        public async Task<ActionResult<IEnumerable<FundInvestor>>> GetInvestorsFunds(int investorId)
+        [HttpGet("investor/{investorId}")]
+        public async Task<ActionResult<IEnumerable<FundInvestorDTO>>> GetInvestorsFunds(int investorId)
         {
             var investorsFunds = await _context.FundInvestors
                 .Include(f => f.Investor)
@@ -56,6 +67,18 @@ namespace PacMan.Server.Controllers
                 {
                     return NotFound("No fund investors found for this fund.");
                 }
+
+                var fundIds = investorsFunds.Select(f => f.FundId).ToList();
+
+                var funds = await _context.Funds
+                    .Where(f => fundIds.Contains(f.Id))
+                    .ToListAsync();
+
+                var investorFundsDTOs = investorsFunds.Select(f => new InvestorFundsDTO()
+                {
+                    InvestorId = f.InvestorId,
+                    Funds = funds
+                });
 
                 return Ok(investorsFunds);
         }

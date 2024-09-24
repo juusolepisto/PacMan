@@ -1,5 +1,5 @@
 import React from "react";
-import useInvestors from "../../hooks/useInvestors";
+import useInvestors from "../../hooks/useFetchInvestors";
 import { Link, useNavigate } from "react-router-dom";
 import { Box, Button, CircularProgress, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 
@@ -30,7 +30,7 @@ const InvestorsPage: React.FC = () => {
                 {investors.map((investor) => (
                   <TableRow className='TableRow' key={investor.id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                     <TableCell component="th" scope="row">
-                      <Link className='Link' to={``}>{investor.name}</Link>
+                      <Link className='Link' to={`/investors/${investor.id}`}>{investor.name}</Link>
                     </TableCell>
                   </TableRow>
                 ))}

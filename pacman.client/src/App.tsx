@@ -5,6 +5,7 @@ import HomePage from "./pages/Home/Home";
 import FundsPage from "./pages/Funds/Funds";
 import FundPage from "./pages/Fund/Fund";
 import InvestorsPage from "./pages/Investors/Investors";
+import InvestorFundsPage from "./pages/InvestorFunds/InvestorFunds";
 
 const appRouter = createBrowserRouter(
     createRoutesFromElements(
@@ -13,6 +14,7 @@ const appRouter = createBrowserRouter(
             <Route path="funds" element={<FundsPage/>}/>
             <Route path="funds/:id" element={<FundPage/>}/>
             <Route path="investors" element={<InvestorsPage/>}/>
+            <Route path="investors/:id" element={<InvestorFundsPage/>}/>
         </Route>
     )
 );

@@ -12,9 +12,17 @@ namespace PacMan.Server.Controllers
         private readonly PacManDbContext _context = context;
 
         [HttpGet(Name = "GetInvestors")]
-        public async Task<IEnumerable<Investor>> GetInvestors()
+        public async Task<IEnumerable<InvestorDTO>> GetInvestors()
         {
-            return await _context.Investors.ToListAsync();
+            var investors = await _context.Investors.ToListAsync();
+
+            var investorDTOs = investors.Select(f => new InvestorDTO()
+            {
+                Id = f.Id,
+                Name = f.Name,
+            });
+
+            return investorDTOs;
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\PacMan.Server.csproj": {}
+    "c:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\PacMan.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\PacMan.Server.csproj": {
+    "c:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\PacMan.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\PacMan.Server.csproj",
+        "projectUniqueName": "c:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\PacMan.Server.csproj",
         "projectName": "PacMan.Server",
-        "projectPath": "C:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\PacMan.Server.csproj",
+        "projectPath": "c:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\PacMan.Server.csproj",
         "packagesPath": "C:\\Users\\Juuso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\obj\\",
+        "outputPath": "c:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
