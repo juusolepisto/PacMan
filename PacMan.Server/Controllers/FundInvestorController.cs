@@ -49,7 +49,6 @@ namespace PacMan.Server.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception (optional)
                 Console.WriteLine($"Error fetching fund investors: {ex.Message}");
                 return StatusCode(500, "Internal server error. Please try again later.");
             }
