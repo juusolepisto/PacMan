@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "DwpLkM+ly8kNBnplw419Wh0wWXHQArNYj/pmiRpdcKw=",
+  "Hash": "PmbvDJAE5pzvXMTWNKNQe6f4hIz+JVYWwEmceMtF1CI=",
   "Source": "PacMan.Server",
   "BasePath": "_content/PacMan.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "c:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\pacman.client\\pacman.client.esproj",
+      "Identity": "C:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\pacman.client\\pacman.client.esproj",
       "Version": 2,
       "Source": "pacman.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",

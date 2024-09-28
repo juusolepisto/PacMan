@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:5173",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "c:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\..\\pacman.client",
+"WorkingDirectory": "C:\\Users\\Juuso\\Desktop\\Coding\\Projects\\PacMan\\PacMan.Server\\..\\pacman.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

@@ -19,7 +19,7 @@ const InvestorsPage: React.FC = () => {
           <Paper elevation={4} sx={{m: 1}}>
             <div style={{display: 'flex', justifyContent: 'space-between', padding: '1rem'}}>
               <Typography variant='h5' gutterBottom sx={{ color: 'black' }}>Investors</Typography>
-              <Button onClick={() => navigate(-1)} >Go back</Button>
+              <Button onClick={() => navigate(-1)} variant="contained">Go back</Button>
             </div>
         </Paper>
         <Paper elevation={4} sx={{m: 1}}>

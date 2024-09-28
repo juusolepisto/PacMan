@@ -1,6 +1,6 @@
 import { Box, Button, CircularProgress, Container, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
-import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import useFunds from "../../hooks/useFetchFunds";
 import useFundInvestors from "../../hooks/useFetchFundInvestors";
 
@@ -24,11 +24,16 @@ const FundPage: React.FC = () => {
     const fundId = parseInt(id!, 10);
     const { funds } = useFunds();
     const { fundInvestors, loading, error } = useFundInvestors(fundId);
-
-    console.log(fundInvestors);
-    console.log(fundId);
-
+    const [ edit, setEdit ] = useState(false);
     const fund = funds.find(f => f.id === parseInt(id!));
+
+    const handleEditClick = () => {
+        if (edit === true){
+            setEdit(false);
+        } else if (edit === false) {
+            setEdit(true);
+        }
+    }
 
     if (!fund) {
         return <div>Fund not found</div>;
@@ -39,7 +44,7 @@ const FundPage: React.FC = () => {
           <CircularProgress color="inherit"/>
         </Box>
       );
-      if (error) return <div>Error: {error}</div>;
+    if (error) return <div>Error: {error}</div>;
     
     return (
         <>
@@ -48,7 +53,7 @@ const FundPage: React.FC = () => {
                     <Paper elevation={4} sx={{m: 1}}>
                         <div style={{display: 'flex', justifyContent: 'space-between', padding: '1rem'}}>
                             <Typography variant='h5' gutterBottom style={{ color: 'black'}}>{fund.name}</Typography>
-                            <Button onClick={() => navigate(-1)} >Go back</Button>
+                            <Button onClick={() => navigate(-1)} variant="contained">Go back</Button>
                         </div>
                     </Paper>
                     <Paper elevation={4} sx={{m: 1}}>
@@ -61,6 +66,7 @@ const FundPage: React.FC = () => {
                                         <TableCell style={{ color: 'black', fontWeight: 'bold'}}>Paid-In</TableCell>
                                         <TableCell style={{ color: 'black', fontWeight: 'bold'}}>Distribution</TableCell>
                                         <TableCell style={{ color: 'black', fontWeight: 'bold'}}>Profit</TableCell>
+                                        <TableCell></TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
@@ -76,6 +82,11 @@ const FundPage: React.FC = () => {
                                             <TableCell style={{ color: 'black'}}>{detail.paidIn}</TableCell>
                                             <TableCell style={{ color: 'black'}}>{detail.distribution}</TableCell>
                                             <TableCell style={{ color: 'black'}}>{detail.profit}</TableCell>
+                                            <TableCell style={{ color: 'black'}}>
+                                                <Link to={`/funds/${id}/edit/${index}`}>
+                                                    <Button onClick={handleEditClick} variant="outlined">Edit</Button>
+                                                </Link>
+                                            </TableCell>
                                         </TableRow>
                                     ))}
                                 </TableBody>

@@ -12,17 +12,6 @@ const theme = createTheme({
         },
     },
     components: {
-        MuiButton: {
-            styleOverrides: {
-                root: {
-                    backgroundColor: 'rgba(45, 181, 131, 1)',
-                    '&:hover': {
-                        backgroundColor: 'rgba(35, 171, 121, 1)',
-                    },
-                    color: 'white',
-                },
-            },
-        },
         MuiPaper: {
             styleOverrides: {
                 root: {
