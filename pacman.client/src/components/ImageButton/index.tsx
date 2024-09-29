@@ -12,12 +12,13 @@ interface ImageButtonProps {
 const ImageButton: React.FC<ImageButtonProps> = ({title, image, url}) => {
     return (
         <>
-            <Container sx={{ mt: 10 }}>
+            <Container>
                 <Link to={url} className="imageButtonLink">
                     <Paper 
                         className="imageButtonPaper" 
                         elevation={5} 
                         style={{ backgroundImage: `url(${image})` }}
+
                     >
                         <Typography 
                             variant="h4"

@@ -2,6 +2,7 @@ import { Box, Container, CssBaseline, ThemeProvider } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import theme from './theme'
 import NavBar from "../Navigation";
+import pacman from '../../assets/pacman-svgrepo-com.svg';
 
 const Root = () => {
     return (
@@ -12,14 +13,20 @@ const Root = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     minHeight: '100vh',
-                    backgroundSize: 'cover',
+                    backgroundSize: {xs:'90%', md: '50%'},
                     backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center',
-                    backgroundColor: '#015757'
+                    backgroundPositionY: 'center',
+                    backgroundPositionX: '40%',
+                    backgroundColor: '#015757',
+                    backgroundImage: `url(${pacman})`,
                 }}
             >
                 <NavBar/>
-                <Box component="main" sx={{ p: 2, flexGrow: 1 }}>
+                <Box component="main" sx={{ 
+                    p: 2, 
+                    flexGrow: 1
+                    
+                    }}>
                     <Container maxWidth="lg" sx={{ 
                         mt: 1, mb: 2, p: 4, 
                         borderRadius: 5

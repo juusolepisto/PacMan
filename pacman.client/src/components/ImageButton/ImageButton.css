@@ -10,7 +10,8 @@
     transition: box-shadow 0.3s ease-in-out;
     position: relative;
     cursor: pointer;
-    color: inherit; 
+    color: inherit;
+    border: solid black;
 }
 
 .imageButtonPaper:hover {
